@@ -1,0 +1,10 @@
+:root {
+  --primary-color: #333333;
+  --secondary-color: #FFFFFF;
+  --background-color: #F7F7F7;
+  --text-color: #333333;
+  --accent-color: #666666;
+  --dark-background-color: rgba(0, 0, 0, 0.3);
+  --font-family: 'Lato', sans-serif;
+  --font-size: 18px;
+}

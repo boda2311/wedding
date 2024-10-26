@@ -1,38 +1,47 @@
-#countdown {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #333; /* Cambia el color de fondo según prefieras */
-    color: #fff;
+ #countdown {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 #countdown h2 {
-    margin-bottom: 10px; /* Espacio entre el título y la fecha */
+    margin-bottom: 50px; /* Espacio entre el título y la fecha */
     font-size: 2em; /* Tamaño más grande para el título */
 }
 
 #wedding-date {
     margin-bottom: 20px; /* Espacio entre la fecha y el temporizador */
-    font-size: 1.2em; /* Ajusta el tamaño de la fecha */
+    font-size: 1.3em; /* Ajusta el tamaño de la fecha */
 }
 
 #timer {
     display: flex;
-    justify-content: center;
-    gap: 40px; /* Espaciado entre los elementos */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: var(--primary-color);
 }
 
 .time-unit {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: inline-block;
+    margin-right: 20px;
+    color: var(--secondary-color);
 }
 
 .time-unit span {
-    font-size: 3em; /* Tamaño de los números, aumenta si lo deseas */
-    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 2em;
 }
 
-.label {
-    font-size: 1em; /* Tamaño del texto para días, horas, etc. */
-    margin-top: 5px; /* Espaciado entre el número y la etiqueta */
+.time-unit .label {
+    font-size: 1.5em;
+    margin-left: 5px;
+    color: var(--accent-color);
 }

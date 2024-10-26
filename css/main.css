@@ -1,14 +1,16 @@
-/* Configuración de scroll snap en el contenedor principal */
 html, body {
     margin: 0;
     height: 100%;
     overflow: hidden;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
 }
 
 main {
     scroll-snap-type: y mandatory; /* Snap en el eje vertical */
     height: 100vh; /* Ocupa la altura completa de la pantalla */
     overflow-y: scroll;
+    background-color: var(--background-color);
 }
 
 /* Configuración de cada sección para scroll snap */
@@ -24,12 +26,29 @@ section {
 }
 
 /* Estilos adicionales de fondo para cada sección */
-#invitation { background-color: #333; }
-#countdown { background-color: #555; }
-#information { background-color: #777; }
-#itinerary { background-color: #999; }
-#dress-code { background-color: #bbb; }
-#thanks { background-color: #ddd; }
+#invitation {
+    background-color: var(--background-color);
+  }
+  
+  #countdown {
+    background-color: var(--primary-color);
+  }
+  
+  #information {
+    background-color: var(--primary-color);
+  }
+  
+  #itinerary {
+    background-color:var(--primary-color);
+  }
+  
+  #dress-code {
+    background-color:var(--primary-color);
+  }
+  
+  #thanks {
+    background-color: var(--primary-color);
+  }
 
 /* Otros ajustes responsivos */
 @media (max-width: 600px) {

@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boda - [Lilian & Kevin]</title>
+    <link rel="stylesheet" href="themes/minimal.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/video.css">
     <link rel="stylesheet" href="css/countdown.css">
 </head>
+
 <body>
     <main>
         <!-- Sección de Video de Invitación -->
-        <section id="invitation">            
+        <section id="invitation">
             <video id="invitation-video" autoplay loop muted>
                 <source src="assets/invitation.mp4" type="video/mp4">
                 Tu navegador no soporta la etiqueta de video.
             </video>
             <button id="sound-button" class="sound-btn" onclick="toggleSound()">Activar sonido</button>
-            <div class="scroll-down">↓</div>            
+            <div class="scroll-down">↓</div>
         </section>
 
-       <!-- Banner de Fecha con Conteo Regresivo -->
-<section id="countdown">
-    <h2>¡Estamos contando los días!</h2>
-    <h5 id="wedding-date">Fecha de la boda: 23 de noviembre de 2024</h5> <!-- Cambia la fecha según tu boda -->
-    <div id="timer">
-        <div class="time-unit">
-            <span id="days">00</span>
-            <span class="label">días</span>
-        </div>
-        <div class="time-unit">
-            <span id="hours">00</span>
-            <span class="label">horas</span>
-        </div>
-        <div class="time-unit">
-            <span id="minutes">00</span>
-            <span class="label">minutos</span>
-        </div>
-        <div class="time-unit">
-            <span id="seconds">00</span>
-            <span class="label">segundos</span>
-        </div>
-    </div>
-</section>
+        <!-- Banner de Fecha con Conteo Regresivo -->
+        <section id="countdown">
+            <h5>¡Faltan...!</h5>
+            <div id="timer">
+                <div class="time-unit">
+                    <span id="days">00</span>
+                    <span class="label">días</span>
+                </div>
+                <div class="time-unit">
+                    <span id="hours">00</span>
+                    <span class="label">hrs</span>
+                </div>
+                <div class="time-unit">
+                    <span id="minutes">00</span>
+                    <span class="label">min</span>
+                </div>
+                <div class="time-unit">
+                    <span id="seconds">00</span>
+                    <span class="label">seg</span>
+                </div>
+            </div>
+            <h5 id="wedding-date">-23 de Nov. de 2024-</h5>
+        </section>
 
         <!-- Información -->
         <section id="information">
@@ -81,4 +84,5 @@
     </main>
     <script src="js/main.js"></script>
 </body>
+
 </html>
