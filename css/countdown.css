@@ -1,0 +1,38 @@
+#countdown {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #333; /* Cambia el color de fondo según prefieras */
+    color: #fff;
+}
+
+#countdown h2 {
+    margin-bottom: 10px; /* Espacio entre el título y la fecha */
+    font-size: 2em; /* Tamaño más grande para el título */
+}
+
+#wedding-date {
+    margin-bottom: 20px; /* Espacio entre la fecha y el temporizador */
+    font-size: 1.2em; /* Ajusta el tamaño de la fecha */
+}
+
+#timer {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Espaciado entre los elementos */
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-unit span {
+    font-size: 3em; /* Tamaño de los números, aumenta si lo deseas */
+    font-weight: bold;
+}
+
+.label {
+    font-size: 1em; /* Tamaño del texto para días, horas, etc. */
+    margin-top: 5px; /* Espaciado entre el número y la etiqueta */
+}

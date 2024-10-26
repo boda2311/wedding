@@ -1,68 +1,42 @@
+/* Configuración de scroll snap en el contenedor principal */
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+main {
+    scroll-snap-type: y mandatory; /* Snap en el eje vertical */
+    height: 100vh; /* Ocupa la altura completa de la pantalla */
+    overflow-y: scroll;
+}
+
+/* Configuración de cada sección para scroll snap */
 section {
-    position: relative;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 100vh;
-    color: white; /* Cambia según tu preferencia */
-}
-
-.container {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#video-invitacion video {
-    object-fit: cover; /* Asegura que el video cubra completamente el área del contenedor */
-    height: auto; /* Mantiene la relación de aspecto */
-    max-height: 600px; /* Ajusta la altura máxima según tus preferencias */
-}
-
-#video-invitacion .container {
-    padding: 10px; /* Agrega un poco de espacio alrededor */
-    text-align: center; /* Centra el texto en la sección */
-}
-
-.parallax {
-    height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+    scroll-snap-align: start; /* Alinea al inicio de cada sección */
+    height: 100vh; /* Ocupa toda la pantalla */
     display: flex;
     align-items: center;
     justify-content: center;
-    background-size: cover; /* Asegura que la imagen cubra toda la sección */
-    background-attachment: fixed; /* Aplica el efecto parallax */
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
     text-align: center;
+    color: #fff;
+    font-size: 1.5em;
 }
 
-/* Estilos específicos para cada sección (ajusta las imágenes y el color de texto según tu diseño) */
-#video-invitacion {
-    background-image: url('assets/video_background.png'); /* Imagen de fondo de la sección de video */
-}
-
-#fecha-conteo {
-    background-image: url('assets/date_background.jpg');
-}
-
-#informacion {
-    background-image: url('assets/info_background.jpg');
-}
+/* Estilos adicionales de fondo para cada sección */
+#invitation { background-color: #333; }
+#countdown { background-color: #555; }
+#information { background-color: #777; }
+#itinerary { background-color: #999; }
+#dress-code { background-color: #bbb; }
+#thanks { background-color: #ddd; }
 
 /* Otros ajustes responsivos */
 @media (max-width: 600px) {
-    .parallax {
-        background-attachment: scroll; /* Desactiva el parallax en dispositivos móviles por rendimiento */
-    }
-}
-
-@media (max-width: 600px) {
-    #video-invitacion h2 {
+    section h2 {
         font-size: 1.5em; /* Ajusta el tamaño del título en pantallas pequeñas */
     }
-    #video-invitacion video {
-        max-height: 1000px; /* Disminuye la altura del video en móviles */
+    video {
+        max-height: 60vh; /* Ajusta la altura del video en móviles */
     }
 }

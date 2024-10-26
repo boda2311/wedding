@@ -4,64 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boda - [Lilian & Kevin]</title>
-    <link rel="stylesheet" href="css/main.css"> <!-- Vincula tu archivo CSS aquí -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/video.css">
+    <link rel="stylesheet" href="css/countdown.css">
 </head>
 <body>
+    <main>
+        <!-- Sección de Video de Invitación -->
+        <section id="invitation">            
+            <video id="invitation-video" autoplay loop muted>
+                <source src="assets/invitation.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+            <button id="sound-button" class="sound-btn" onclick="toggleSound()">Activar sonido</button>
+            <div class="scroll-down">↓</div>            
+        </section>
 
-    <!-- Sección de Video de Invitación -->
-    <section id="video-invitacion" class="parallax">
-        <div class="container">            
-            <video controls autoplay muted>
-            <source src="assets/invitation.mp4" type="video/mp4">
-            Tu navegador no soporta la etiqueta de video.
-        </video>
+       <!-- Banner de Fecha con Conteo Regresivo -->
+<section id="countdown">
+    <h2>¡Estamos contando los días!</h2>
+    <h5 id="wedding-date">Fecha de la boda: 23 de noviembre de 2024</h5> <!-- Cambia la fecha según tu boda -->
+    <div id="timer">
+        <div class="time-unit">
+            <span id="days">00</span>
+            <span class="label">días</span>
         </div>
-    </section>
-
-    <!-- Banner de Fecha con Conteo Regresivo -->
-    <section id="banner-fecha" class="parallax">
-        <div class="container">
-            <h2>¡Nos Casamos!</h2>
-            <p>Fecha: [Fecha de la boda]</p>
-            <div id="conteo-regresivo"> <!-- Aquí va el conteo regresivo --> </div>
+        <div class="time-unit">
+            <span id="hours">00</span>
+            <span class="label">horas</span>
         </div>
-    </section>
-
-    <!-- Información -->
-    <section id="informacion" class="parallax">
-        <div class="container">
-            <h2>Información</h2>
-            <img src="ruta-a-tu-imagen" alt="Imagen descriptiva">
-            <p>[Versículo]</p>
-            <a href="LINK_CONFIRMACION_ASISTENCIA">Confirma tu asistencia</a>
-            <a href="LINK_WAZE">Ubicación</a>
+        <div class="time-unit">
+            <span id="minutes">00</span>
+            <span class="label">minutos</span>
         </div>
-    </section>
-
-    <!-- Itinerario -->
-    <section id="itinerario" class="parallax">
-        <div class="container">
-            <h2>Itinerario</h2>
-            <p>[Descripción del itinerario]</p>
+        <div class="time-unit">
+            <span id="seconds">00</span>
+            <span class="label">segundos</span>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Banner de Código de Vestimenta -->
-    <section id="codigo-vestimenta" class="parallax">
-        <div class="container">
-            <h2>Código de Vestimenta</h2>
-            <p>Formal</p>
-        </div>
-    </section>
+        <!-- Información -->
+        <section id="information">
+            <div class="container">
+                <h2>Información</h2>
+                <img src="ruta-a-tu-imagen" alt="Imagen descriptiva">
+                <p>[Versículo]</p>
+                <a href="LINK_CONFIRMACION_ASISTENCIA">Confirma tu asistencia</a>
+                <a href="LINK_WAZE">Ubicación</a>
+            </div>
+        </section>
 
-    <!-- Agradecimientos -->
-    <section id="agradecimientos" class="parallax">
-        <div class="container">
-            <h2>Agradecimientos</h2>
-            <p>Gracias por acompañarnos en este día especial.</p>
-        </div>
-    </section>
+        <!-- Itinerary -->
+        <section id="itinerary">
+            <div class="container">
+                <h2>Itinerary</h2>
+                <p>[Descripción del itinerary]</p>
+            </div>
+        </section>
 
-    <script src="script.js"></script> <!-- Vincula tu archivo JS aquí, si es necesario -->
+        <!-- Banner de Código de Vestimenta -->
+        <section id="dress-code">
+            <div class="container">
+                <h2>Código de Vestimenta</h2>
+                <p>Formal</p>
+            </div>
+        </section>
+
+        <!-- Thanks -->
+        <section id="thanks">
+            <div class="container">
+                <h2>Agradecemos tu presencia</h2>
+                <p>Gracias por acompañarnos en este día especial.</p>
+            </div>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
 </body>
 </html>
