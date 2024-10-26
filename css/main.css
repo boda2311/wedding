@@ -13,3 +13,56 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+#video-invitacion video {
+    object-fit: cover; /* Asegura que el video cubra completamente el área del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    max-height: 600px; /* Ajusta la altura máxima según tus preferencias */
+}
+
+#video-invitacion .container {
+    padding: 10px; /* Agrega un poco de espacio alrededor */
+    text-align: center; /* Centra el texto en la sección */
+}
+
+.parallax {
+    height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-attachment: fixed; /* Aplica el efecto parallax */
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+}
+
+/* Estilos específicos para cada sección (ajusta las imágenes y el color de texto según tu diseño) */
+#video-invitacion {
+    background-image: url('assets/video_background.png'); /* Imagen de fondo de la sección de video */
+}
+
+#fecha-conteo {
+    background-image: url('assets/date_background.jpg');
+}
+
+#informacion {
+    background-image: url('assets/info_background.jpg');
+}
+
+/* Otros ajustes responsivos */
+@media (max-width: 600px) {
+    .parallax {
+        background-attachment: scroll; /* Desactiva el parallax en dispositivos móviles por rendimiento */
+    }
+}
+
+@media (max-width: 600px) {
+    #video-invitacion h2 {
+        font-size: 1.5em; /* Ajusta el tamaño del título en pantallas pequeñas */
+    }
+    #video-invitacion video {
+        max-height: 1000px; /* Disminuye la altura del video en móviles */
+    }
+}
